@@ -58,10 +58,10 @@ export default function Home({exploreData,cardsData}) {
   )}
 
   export async function getStaticProps() {
-    const exploreData = await fetch('https://links.papareact.com/pyp')
-    .then(res => res.json());
-    const cardsData = await fetch('https://links.papareact.com/zp1')
-    .then(res => res.json());
+    const exploreData = eData
+    const cardsData = cData
+    // const cardsData = await fetch('https://links.papareact.com/zp1')
+    // .then(res => res.json());
     return {
       props: {
         exploreData,
@@ -69,3 +69,19 @@ export default function Home({exploreData,cardsData}) {
       }
     }
   }
+  const eData = [
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/finddoctors.svg","location":"Doctors","distance":"45-minute drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/weddingrequisites.svg","location":"Wedding Requisites","distance":"4.5-hour drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/travelbookings.svg","location":"Travel","distance":"4.5-hour drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/renthire.svg","location":"Rent & Hire","distance":"4-hour drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/civilcontractors.svg","location":"Contractors","distance":"45-minute drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/realestate.svg","location":"Real Estate","distance":"4.5-hour drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/homeservices.svg","location":"Home Services","distance":"6-hour drive"},
+    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/jobconsultants.svg","location":"Jobs","distance":"2-hour drive"}]
+
+    const cData = [
+      {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/acrepairservice.jpg?v=1","title":"Ac Repair"},
+      {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/pestcontrol.jpg?v=1","title":"Pest Control"},
+      {"img":"https://links.papareact.com/s03","title":"Home Construction"},
+      {"img":"https://links.papareact.com/8ix","title":"Pet Care"}
+    ]

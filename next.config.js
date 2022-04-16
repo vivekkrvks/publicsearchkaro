@@ -3,7 +3,7 @@ module.exports = {
   reactStrictMode: false,
   images: {
     domains: [
-      "res.cloudinary.com","links.papareact.com"
+      "res.cloudinary.com","links.papareact.com","akam.cdn.jdmagicbox.com"
     ]
   }
 }

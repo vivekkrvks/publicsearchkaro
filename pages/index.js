@@ -83,5 +83,9 @@ export default function Home({exploreData,cardsData}) {
       {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/acrepairservice.jpg?v=1","title":"Ac Repair"},
       {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/pestcontrol.jpg?v=1","title":"Pest Control"},
       {"img":"https://links.papareact.com/s03","title":"Home Construction"},
+      {"img":"https://links.papareact.com/8ix","title":"Pet Care"},
+      {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/acrepairservice.jpg?v=1","title":"Ac Repair"},
+      {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/pestcontrol.jpg?v=1","title":"Pest Control"},
+      {"img":"https://links.papareact.com/s03","title":"Home Construction"},
       {"img":"https://links.papareact.com/8ix","title":"Pet Care"}
     ]

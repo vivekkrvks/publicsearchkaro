@@ -1,11 +1,27 @@
+import { useState } from "react";
 import Image from "next/image";
 import  {GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon} from '@heroicons/react/solid'
-function Header() {
-return(<header
-className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-5 py-2 md:px-10"
->
+import { useRouter } from 'next/router'
+function Header({placeholder}) {
+const [searchData, setSearchData] = useState("");
+
+    const router = useRouter();
+    const search = () => {
+        router.push({
+            pathname: '/search',
+            query: {
+                searchData
+            }
+        })
+    }
+
+    return(
+    <header
+    className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-5 py-2 md:px-10"
+            >
     {/* Left */} 
-    <div className="relative flex items-center h-10
+    <div onClick={() => router.push('/')} 
+    className="relative flex items-center h-10
      cursor-pointer my-auto " >
     <Image 
     // src="https://links.papareact.com/qd3"
@@ -22,12 +38,15 @@ className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-5 py-2 md:px
     ">
     <input 
     type="text" 
-    placeholder="Start your Search"
+    placeholder={placeholder || "Start your Search"}
     className=" flex-grow pl-5 bg-transparent outline-none text-sm text-grey-600
     placeholder-grey-400
     "
+    value={searchData}
+    onChange={(e) => setSearchData(e.target.value)}
     />
     <SearchIcon 
+    onClick={search}
     className="hidden md:inline-flex
      h-8 bg-red-400
     text-white rounded-full

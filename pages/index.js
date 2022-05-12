@@ -5,7 +5,6 @@ import Header from "../components/HomePage/Header";
 import LargeCard from "../components/HomePage/LargeCard";
 import MediumCard from "../components/HomePage/MediumCard";
 import SmallCard from "../components/HomePage/SmallCard";
-
 export default function Home({exploreData,cardsData}) {
   return (
     <div className=""> 

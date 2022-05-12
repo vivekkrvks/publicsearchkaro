@@ -41,7 +41,6 @@ function Search({searchResults}) {
                         price={price}
                         total={total}
                         key={index}
-
                    />
                 ))}
                 </div>

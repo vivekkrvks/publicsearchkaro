@@ -28,7 +28,7 @@ function CrausalCom() {
   <div className="carousel-inner relative w-full overflow-hidden">
     <div className="carousel-item active float-left w-full h-40">
       <Image
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+        src="https://thumbs.dreamstime.com/z/hospital-building-modern-parking-lot-59693686.jpg"
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Wild Landscape"
@@ -36,7 +36,7 @@ function CrausalCom() {
     </div>
     <div className="carousel-item float-left w-full h-40 ">
       <Image
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+        src="https://thumbs.dreamstime.com/z/team-healthcare-workers-id-badges-outside-hospital-team-healthcare-workers-id-badges-outside-hospital-127007370.jpg"
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Camera"
@@ -44,7 +44,7 @@ function CrausalCom() {
     </div>
     <div className="carousel-item float-left w-full h-40 ">
       <Image
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+        src="https://thumbs.dreamstime.com/z/doctors-hospital-corridor-nurse-pushing-gurney-stretcher-bed-male-senior-female-patient-32154012.jpg"
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Exotic Fruits"

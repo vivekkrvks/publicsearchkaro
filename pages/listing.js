@@ -15,11 +15,9 @@ function Search({searchResults}) {
 <CrausalCom/>
 <div className="space-y-2 text-xs text-gray-600">
   <div className="flex mt-2 mb-2 space-x-2">
-  <h1 className="font-bold leading-tight text-2xl  text-black">Tailwind Elements </h1>
-  {/* <HeartIcon className="h-7  cursor-pointer"/> */}
+  <h1 className="font-bold leading-tight text-2xl  text-black">Skin Radiance Clinic </h1>
+  <HeartIcon className="h-7  cursor-pointer"/>
   </div>
-
-
             <p>How Search Karo Works </p>
             <p>
               <RatingCom star={4} num={4.4}  />
@@ -28,6 +26,21 @@ function Search({searchResults}) {
             <p>Press</p>
             <p>Investor Relations</p>
         </div>
+<div className="flex justify-between py-2" >
+
+<div className="flex items-center space-y-2  border-2 p-2 rounded-full shadow-sm" >
+            <HeartIcon className="h-6" />
+        </div>
+<div className="flex items-center space-x-2 border-2 p-2 rounded-full shadow-sm" >
+            <HeartIcon className="h-6" />
+        </div>
+<div className="flex items-center space-x-2 border-2 p-2 rounded-full shadow-sm" >
+            <HeartIcon className="h-6" />
+        </div>
+<div className="flex items-center space-x-2 border-2 p-2 rounded-full shadow-sm" >
+            <HeartIcon className="h-6" />
+        </div>
+</div>
 </main>
 
         <Footer />

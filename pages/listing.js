@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import CrausalCom from "../components/ListingPage/Crausal";
 import {HeartIcon} from "@heroicons/react/outline"
 import RatingCom from "../components/ListingPage/Rating";
+import ActionButtonCom from "../components/ListingPage/ActionButton";
 
 function Search({searchResults}) {
     const router = useRouter();
@@ -26,59 +27,10 @@ function Search({searchResults}) {
             <p>Press</p>
             <p>Investor Relations</p>
         </div>
-<div className="flex justify-between  py-2" >
-
-<div className="text-xs items-center text-gray-600">
-<div className="flex items-center space-y-2  border-2 p-2 rounded-full shadow-sm" >
-<img
-        src="https://www.svgrepo.com/show/313260/call.svg"
-        layout="fill" 
-        className="block rounded h-6"
-        alt="Exotic Fruits"
-      />
-      
-        </div>
-        <p className="items-center space-y-1  p-2">Call</p>
-        </div>
-
-<div className="text-xs text-gray-600">
-<div className="flex items-center space-y-2  border-2 p-2 rounded-full shadow-sm" >
-<img
-        src="https://www.svgrepo.com/show/223645/placeholder-map-pointer.svg"
-        layout="fill" 
-        className="block rounded h-6"
-        alt="Exotic Fruits"
-      />
-        </div>
-        <p className="items-center space-y-1  p-2">Map</p>
-        </div>
-
-<div className="text-xs text-gray-600">
-<div className="flex items-center space-y-2  border-2 p-2 rounded-full shadow-sm" >
-<img
-        src="https://www.svgrepo.com/show/303150/whatsapp-symbol-logo.svg"
-        layout="fill" 
-        className="block rounded h-6"
-        alt="Exotic Fruits"
-      />
-        </div>
-        <p className="items-center space-y-1  p-2">Map</p>
-        </div>
-
-<div className="text-xs text-gray-600">
-<div className="flex items-center space-y-2  border-2 p-2 rounded-full shadow-sm" >
-<img
-        src="https://www.svgrepo.com/show/49524/book.svg"
-        layout="fill" 
-        className="block rounded h-6"
-        alt="Exotic Fruits"
-      />
-        </div>
-        <p className="items-center space-y-1  p-2">Map</p>
-        </div>
-
-
-</div>
+<ActionButtonCom/>
+<button type="button" class="inline-block w-full px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+Book Appointment
+  </button>
 
 
 </main>

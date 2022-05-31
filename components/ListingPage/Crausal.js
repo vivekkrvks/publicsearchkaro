@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function CrausalCom() {
+function CrausalCom({img}) {
   return (
 <div id="carouselExampleIndicators" className="carousel slide relative" data-bs-ride="carousel">
   <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
@@ -28,7 +28,7 @@ function CrausalCom() {
   <div className="carousel-inner relative w-full overflow-hidden">
     <div className="carousel-item active float-left w-full h-40">
       <Image
-        src="https://thumbs.dreamstime.com/z/hospital-building-modern-parking-lot-59693686.jpg"
+        src={img[0].imgUrl}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Wild Landscape"
@@ -36,7 +36,7 @@ function CrausalCom() {
     </div>
     <div className="carousel-item float-left w-full h-40 ">
       <Image
-        src="https://thumbs.dreamstime.com/z/team-healthcare-workers-id-badges-outside-hospital-team-healthcare-workers-id-badges-outside-hospital-127007370.jpg"
+        src={img[1].imgUrl}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Camera"
@@ -44,7 +44,7 @@ function CrausalCom() {
     </div>
     <div className="carousel-item float-left w-full h-40 ">
       <Image
-        src="https://thumbs.dreamstime.com/z/doctors-hospital-corridor-nurse-pushing-gurney-stretcher-bed-male-senior-female-patient-32154012.jpg"
+         src={img[2].imgUrl}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Exotic Fruits"

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function ServiceCardCom({img,location,distance}) {
+function ServiceCardCom({title}) {
   return (
     <div className="flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer
     hover:bg-gray-100 hover:shadow-lg hover:scale-110 transition 
@@ -13,7 +13,7 @@ function ServiceCardCom({img,location,distance}) {
         />
         </div>
         <div>
-            <h2>{"Skin Check"}</h2>
+            <h2>{title}</h2>
             
         </div>
     </div>

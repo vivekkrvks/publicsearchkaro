@@ -9,26 +9,27 @@ import PhotosCardCom from "../components/ListingPage/allPhotoList";
 import LogoDesCom from "../components/ListingPage/LogoDes";
 import ServiceCardCom from "../components/ListingPage/ServiceCard";
 
-function Listing({cardsData,LogoDesData}) {
+function Listing({cardsData,vendorData}) {
     const router = useRouter();
-    const { searchData } = router.query;
+    const { idNo } = router.query;
+    console.log(idNo)
   return (
     <div className="bg-gray-50">
-        <Header placeholder={`Result for ${searchData}`}/>
+        <Header placeholder={`Result for ${vendorData.businessName}`}/>
 <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
-<CrausalCom/>
+<CrausalCom />
 <div className="space-y-2 text-xs text-gray-600">
   <div className="flex mt-2 mb-2 space-x-2">
-  <h1 className="font-bold leading-tight text-2xl  text-black">Skin Radiance Clinic </h1>
+  <h1 className="font-bold leading-tight text-2xl  text-black">{vendorData.businessName}</h1>
   <HeartIcon className="h-7  cursor-pointer"/>
   </div>
-            <p>How Search Karo Works </p>
+            <p>By - {vendorData.contactPersonName} </p>
             <p>
-              <RatingCom star={4} num={4.4}  />
+              {/* <RatingCom star={4} num={4.4}  /> */}
             </p>
-            <p>Careers</p>
-            <p>Press</p>
-            <p>Investor Relations</p>
+            <p>Stablished on - {vendorData.yearEstablished}</p>
+            <p>{idNo}</p>
+            {/* <p>Investor Relations</p> */}
         </div>
 <ActionButtonCom/>
 
@@ -175,12 +176,12 @@ export default Listing
 export async function getStaticProps() {
   const cardsData = cData
 
-  // const cardsData = await fetch('https://links.papareact.com/zp1')
-  // .then(res => res.json());
+  const vendorData = await fetch('http://3.110.212.184/api/v1/addition/vendor/get/62965dc3cb0933524d93d08b')
+  .then(res => res.json());
   return {
     props: {
       cardsData,
-  
+      vendorData
       
     }
   }

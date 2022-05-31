@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function PhotosCardCom({img,title}) {
+function PhotosCardCom({img}) {
   return (
     <div className="cursor-pointer hover:scale-105 transform
     transition duration-300 ease-out

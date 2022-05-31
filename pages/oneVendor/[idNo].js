@@ -56,7 +56,7 @@ Upload Photo
          </section>
 <section>
 {/* //////////////////////////////////// */}
-<div class="grid grid-cols-1 divide-y">
+<div className="grid grid-cols-1 divide-y">
 
 <LogoDesCom logo={ <MapIcon className="h-5 object-center"/>} 
 text={"State: " + vendorData.state + ", District: " + vendorData.district}/>
@@ -67,7 +67,7 @@ text={vendorData.contactNo}
 text={"Opens at 11.00 AM EveryDay"}
 /> */}
 {/* Services */}
-<div class="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
+<div className="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
 <h2 className="text-1xl font-semibold  ">
             Services
           </h2>
@@ -78,7 +78,7 @@ text={"Opens at 11.00 AM EveryDay"}
           </div>
 </div>
 {/* Description */}
-<div class="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
+<div className="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
           
 </div>
 

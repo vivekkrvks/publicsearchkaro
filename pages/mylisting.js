@@ -52,7 +52,7 @@ Upload Photo
          </section>
 <section>
 {/* //////////////////////////////////// */}
-<div class="grid grid-cols-1 divide-y">
+<div className="grid grid-cols-1 divide-y">
 
 <LogoDesCom logo={ <MapIcon className="h-5 object-center"/>} 
 text={"Rajendra Nagar Patna 800016, Rajendra Nagar Golambar Vaishali Golambar, Purnia HO, Purnia - 854301 (Behind Apsa Medical Shop)"}
@@ -64,7 +64,7 @@ text={"09846173904"}
 text={"Opens at 11.00 AM EveryDay"}
 />
 {/* Services */}
-<div class="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
+<div className="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
 <h2 className="text-1xl font-semibold  ">
             Services
           </h2>
@@ -79,7 +79,7 @@ text={"Opens at 11.00 AM EveryDay"}
           </div>
 </div>
 {/* Description */}
-<div class="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
+<div className="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
 <h2 className="text-2xl font-semibold  ">
 About Skin Radiance Clinic
           </h2>
@@ -88,61 +88,61 @@ About Skin Radiance Clinic
       <div className="py-4 " >
 
 <div>
-<div class="dtltrndhdng font13"><strong>Awards</strong></div>
-<div class="dtltrndsubs font13">Dermacon -2011</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Awards</strong></div>
+<div className="dtltrndsubs font13">Dermacon -2011</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Booking Policy</strong></div>
-<div class="dtltrndsubs font13">No Restriction</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Booking Policy</strong></div>
+<div className="dtltrndsubs font13">No Restriction</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Cancellation Policy</strong></div>
-<div class="dtltrndsubs font13">No Restriction</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Cancellation Policy</strong></div>
+<div className="dtltrndsubs font13">No Restriction</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Consultation fee</strong></div>
-<div class="dtltrndsubs font13">₹ 500</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Consultation fee</strong></div>
+<div className="dtltrndsubs font13">₹ 500</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Fellowship</strong></div>
-<div class="dtltrndsubs font13">FAADS SINGAPORE. , FDI AMERICA DERMTECH, DERMACON INDIA , US , USA .</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Fellowship</strong></div>
+<div className="dtltrndsubs font13">FAADS SINGAPORE. , FDI AMERICA DERMTECH, DERMACON INDIA , US , USA .</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Main Qualification</strong></div>
-<div class="dtltrndsubs font13">MBBS , MD ( SKIN , HAIR &amp; VD ) DVL</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Main Qualification</strong></div>
+<div className="dtltrndsubs font13">MBBS , MD ( SKIN , HAIR &amp; VD ) DVL</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Membership</strong></div>
-<div class="dtltrndsubs font13">Faads President.. India East .</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Membership</strong></div>
+<div className="dtltrndsubs font13">Faads President.. India East .</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Qualification</strong></div>
-<div class="dtltrndsubs font13">MBBS , MD ( SKIN , HAIR &amp; VD ) DVL-DR D Y PATIL MUMBAI. -2011</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Qualification</strong></div>
+<div className="dtltrndsubs font13">MBBS , MD ( SKIN , HAIR &amp; VD ) DVL-DR D Y PATIL MUMBAI. -2011</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Registration No</strong></div>
-<div class="dtltrndsubs font13">MCI INDIA 2011</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Registration No</strong></div>
+<div className="dtltrndsubs font13">MCI INDIA 2011</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Specialization</strong></div>
-<div class="dtltrndsubs font13">Dermatologists</div>
-<div class="dtltrndsubs font13">&nbsp;</div>
+<div className="dtltrndhdng font13"><strong>Specialization</strong></div>
+<div className="dtltrndsubs font13">Dermatologists</div>
+<div className="dtltrndsubs font13">&nbsp;</div>
 </div>
 <div>
-<div class="dtltrndhdng font13"><strong>Years of Experience</strong></div>
-<div class="dtltrndsubs font13">12</div>
+<div className="dtltrndhdng font13"><strong>Years of Experience</strong></div>
+<div className="dtltrndsubs font13">12</div>
 </div>
 {/*  */}
-<div class="detailbizinfosample py-3">
+<div className="detailbizinfosample py-3">
 <h1><strong>Skin Radiance Clinic in Rajendra Nagar Golambar Vaishali Golambar, Purnia</strong></h1>
 <p>Skin Radiance Clinic listed under Beauty Clinics in Rajendra Nagar Golambar Vaishali Golambar, Purnia. Check Visiting Time, Fees, Address, Contact Number, Ratings &amp; Reviews, Photos, Maps etc, on Justdial.</p>
 <h1>&nbsp;</h1>

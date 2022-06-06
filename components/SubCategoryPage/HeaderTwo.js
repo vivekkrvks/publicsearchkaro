@@ -1,4 +1,5 @@
 import  {ChevronLeftIcon, ShareIcon } from '@heroicons/react/Outline'
+import PopUpCom from '../Common/PopUp';
 
 function HeaderTwoCom() {
     return(
@@ -6,7 +7,7 @@ function HeaderTwoCom() {
     className="sticky top-0 z-30 grid grid-cols-3 bg-white shadow-md px-5 py-2 md:px-10 "
             >
     {/* Left */} 
-    <div onClick={() => router.push('/')} 
+    <div onClick={() => onclick=history.back()} 
     className="relative flex items-center h-5
      cursor-pointer my-auto " >
     <ChevronLeftIcon className="h-6" />

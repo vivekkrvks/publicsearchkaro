@@ -32,13 +32,14 @@ const [searchData, setSearchData] = useState("");
      />
     </div>
        {/* middle */}
-    <div className="flex items-center md:border-2 
+    <div onClick={() => router.push('/SearchPage')}
+     className="flex items-center md:border-2 
     rounded-full py-2
-    md:shadow-sm
-    ">
+    md:shadow-sm 
+    " >
     <input 
     type="text" 
-    placeholder={placeholder || "Start your Search"}
+    placeholder={placeholder || "Search Here"}
     className=" flex-grow pl-5 bg-transparent outline-none text-sm text-grey-600
     placeholder-grey-400
     "

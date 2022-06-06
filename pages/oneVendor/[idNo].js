@@ -97,7 +97,7 @@ export default Listing
 export async function getServerSideProps({params}) {
     const cardsData = cData
     const vendorId = params.idNo
-  const vendorData = await fetch(`https://searchkarna.com/api/v1/addition/vendor/get/${vendorId}`)
+  const vendorData = await fetch(`https://searchkarna.com/api/v1/addition/vendor/addVendor/get/${vendorId}`)
   .then(res => res.json());
   return {
     props: {

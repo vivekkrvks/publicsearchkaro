@@ -1,8 +1,10 @@
+import { useState } from "react";
 import  {ChevronDownIcon, ChevronLeftIcon, LocationMarkerIcon, SearchIcon, ShareIcon } from '@heroicons/react/outline'
-import PopUpCom from '../components/Common/PopUp';
 import { useRouter } from 'next/router'
 
 function SearchPageCom() {
+const [searchData, setSearchData] = useState("");
+
   const router = useRouter();
   const search = () => {
     router.push({
@@ -54,7 +56,7 @@ function SearchPageCom() {
     
     />
     <SearchIcon 
-    onClick={() => router.push('/SearchPage')}
+     onClick={search}
     className="hidden md:inline-flex
      h-8 bg-red-400
     text-white rounded-full

@@ -4,7 +4,14 @@ import { useRouter } from 'next/router'
 
 function SearchPageCom() {
   const router = useRouter();
-
+  const search = () => {
+    router.push({
+        pathname: '/SearchResult',
+        query: {
+            searchData
+        }
+    })
+}
     return(
         <>
     <header
@@ -47,7 +54,7 @@ function SearchPageCom() {
     
     />
     <SearchIcon 
-    // onClick={search}
+    onClick={() => router.push('/SearchPage')}
     className="hidden md:inline-flex
      h-8 bg-red-400
     text-white rounded-full

@@ -8,7 +8,7 @@ const [searchData, setSearchData] = useState("");
     const router = useRouter();
     const search = () => {
         router.push({
-            pathname: '/search',
+            pathname: '/SearchResult',
             query: {
                 searchData
             }

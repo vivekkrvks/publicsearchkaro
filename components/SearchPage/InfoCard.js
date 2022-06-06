@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {HeartIcon} from "@heroicons/react/outline"
-import {StarIcon} from "@heroicons/react/solid"
+import {PhoneOutgoingIcon, StarIcon} from "@heroicons/react/solid"
 import { useRouter } from 'next/router'
 
 function InfoCard({img,location,title,
@@ -11,32 +11,39 @@ function InfoCard({img,location,title,
   return (
     <div
     onClick={() => router.push('/listing')} 
-    className="flex py-7 px-2 pr-4 border-b cursor-pointer 
+    className="flex py-4 px-2 pr-4 border-b cursor-pointer 
     hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
-        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0" >
-            <Image 
-            className="rounded-2xl"
-            src={img} layout="fill" objectFit="cover"/>
-        </div>
-        <div className="flex  flex-col flex-grow pl-5">
-            <div className="flex justify-between">
-                <p className="text-xs">{location} </p>
-                <HeartIcon className="h-7 cursor-pointer"/>
-            </div>
-            <h4 className="text-xl">{title}</h4>
-            <div className="border-b w-10 pt-2 " />
-            <p className="hidden md:inline-flex pt-2 text-sm text-gray-500 flex-grow">{description}</p>
-            <div className="flex justify-between item-end pt-5 ">
-                <p className="flex items-center">
-                    <StarIcon className="h-5 text-red-400" />
-                    {star}
-                </p>
-                <div>
-                    <p className="text-lg font-semibold lg:text-2xl pb-2">{price}</p>
-                    <p className="text-right font-extralight">{total}</p>
-                </div>
-            </div>
-        </div>
+    <div className="relative h-52 w-40 md:w-80   flex-shrink-0" >
+        <Image 
+        className="rounded-2xl"
+        src={img} layout="fill" objectFit="cover"/>
+    </div>
+    <div className=" flex flex-col w-full ">
+         <p
+         className="text-m font-semibold mt-2 mb-2 mx-2">
+         Skin Radiance Clinic</p>
+         <p
+             className=" text-sm mb-2 mx-2">
+             By - Dinkar
+        </p>
+         <p
+             className=" text-sm mb-2 mx-2">
+             State: WestBangal, District: Kolkata
+        </p>
+         <p
+             className=" text-sm mb-2 mx-2">
+             Stablished on - 2004
+        </p>
+    <div className="align-baseline mt-auto mx-2 my-2 "> 
+    <button type="button" 
+    class="inline-block w-full 
+    
+    px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition
+     duration-150 ease-in-out ">
+         Call
+         </button>
+    </div>
+    </div>
     </div>
   )
 }

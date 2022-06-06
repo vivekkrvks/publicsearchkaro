@@ -13,20 +13,20 @@ function SearchPageCom() {
     {/* Left */} 
     <div onClick={() => onclick=history.back()} 
     className="relative flex items-center h-5
-     cursor-pointer my-auto " >
-    <ChevronLeftIcon className="h-6" />
+      my-auto " >
+    <ChevronLeftIcon className="h-6 cursor-pointer" />
     </div>
     {/* middle */}
     <div 
     onClick={() => router.push('/SearchLocation')}
-    className="flex items-center justify-center  py-2 ">
-      <LocationMarkerIcon className='h-5'/>
-        <p className="font-medium leading-tight text-xl">Araria </p>
-        <ChevronDownIcon className='h-5'/>
+    className="flex items-center justify-center  py-2  ">
+      <LocationMarkerIcon className='h-6 cursor-pointer '/>
+        <p className="font-medium leading-tight text-xl cursor-pointer">Araria </p>
+        <ChevronDownIcon className='h-6 cursor-pointer'/>
          </div>
     {/* right */}
     <div className="flex items-center justify-end text-grey-500 space-x-4 ">
-    <ShareIcon className="h-6" />
+    <ShareIcon className="h-6 cursor-pointer" />
     </div>
 </header>
 <section>

@@ -1,4 +1,4 @@
-import  {ChevronRightIcon, ShareIcon } from '@heroicons/react/Outline'
+import  {ChevronRightIcon } from '@heroicons/react/outline'
 import Image from "next/image";
 
 function SubListCom({logoLink,title}) {

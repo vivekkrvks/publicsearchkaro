@@ -1,4 +1,4 @@
-import  {ChevronLeftIcon, ShareIcon } from '@heroicons/react/Outline'
+import  {ChevronLeftIcon, ShareIcon } from '@heroicons/react/outline'
 import PopUpCom from '../Common/PopUp';
 
 function HeaderTwoCom() {

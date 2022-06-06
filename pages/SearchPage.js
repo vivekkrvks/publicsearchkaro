@@ -1,4 +1,4 @@
-import  {ChevronDownIcon, ChevronLeftIcon, LocationMarkerIcon, SearchIcon, ShareIcon } from '@heroicons/react/Outline'
+import  {ChevronDownIcon, ChevronLeftIcon, LocationMarkerIcon, SearchIcon, ShareIcon } from '@heroicons/react/outline'
 import PopUpCom from '../components/Common/PopUp';
 import { useRouter } from 'next/router'
 

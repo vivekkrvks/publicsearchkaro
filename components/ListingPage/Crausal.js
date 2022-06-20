@@ -28,28 +28,28 @@ function CrausalCom({img}) {
   <div className="carousel-inner relative w-full overflow-hidden">
     <div className="carousel-item active float-left w-full h-40">
       <Image
-        src={img[0].imgUrl}
+        src={img[0].imgUrl || "https://www.hyattrestaurants.com/en/dining/india/cafe-in-raipur"}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Wild Landscape"
       />
     </div>
-    <div className="carousel-item float-left w-full h-40 ">
+ { (img?.length >1) &&( <div className="carousel-item float-left w-full h-40 ">
       <Image
-        src={img[1].imgUrl}
+        src={img[1]?.imgUrl || "https://www.hyattrestaurants.com/en/dining/india/cafe-in-raipur"}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Camera"
       />
-    </div>
-    <div className="carousel-item float-left w-full h-40 ">
+    </div>)}
+    {(img?.length >2)&& (<div className="carousel-item float-left w-full h-40 ">
       <Image
-         src={img[2].imgUrl}
+         src={img[2]?.imgUrl || "https://www.hyattrestaurants.com/en/dining/india/cafe-in-raipur"}
         layout="fill" 
         className="block w-full rounded-2xl"
         alt="Exotic Fruits"
       />
-    </div>
+    </div>)}
 
   </div>
   <button

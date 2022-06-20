@@ -95,13 +95,11 @@ text={"Opens at 11.00 AM EveryDay"}
 export default Listing
 
 export async function getServerSideProps({params}) {
-    const cardsData = cData
     const vendorId = params.idNo
   const vendorData = await fetch(`https://searchkarna.com/api/v1/addition/vendor/addVendor/get/${vendorId}`)
   .then(res => res.json());
   return {
     props: {
-        cardsData,
       vendorData
       
     }
@@ -109,14 +107,5 @@ export async function getServerSideProps({params}) {
 }
 
 
-  const cData = [
-    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/acrepairservice.jpg?v=1","title":"Ac Repair"},
-    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/pestcontrol.jpg?v=1","title":"Pest Control"},
-    {"img":"https://links.papareact.com/s03","title":"Home Construction"},
-    {"img":"https://links.papareact.com/8ix","title":"Pet Care"},
-    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/acrepairservice.jpg?v=1","title":"Ac Repair"},
-    {"img":"https://akam.cdn.jdmagicbox.com/images/icons/android/newhome/2/pestcontrol.jpg?v=1","title":"Pest Control"},
-    {"img":"https://links.papareact.com/s03","title":"Home Construction"},
-    {"img":"https://links.papareact.com/8ix","title":"Pet Care"}
-  ]
+
 

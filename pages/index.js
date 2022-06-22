@@ -5,7 +5,8 @@ import Header from "../components/HomePage/Header";
 import LargeCard from "../components/HomePage/LargeCard";
 import MediumCard from "../components/HomePage/MediumCard";
 import SmallCard from "../components/HomePage/SmallCard";
-export default function Home({exploreData,cardsData}) {
+import LogoDesCom from "../components/ListingPage/LogoDes";
+export default function Home({exploreData,cardsData,catData}) {
   return (
     <div className=""> 
       <Head>
@@ -28,8 +29,8 @@ export default function Home({exploreData,cardsData}) {
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
         
         ">
-        {exploreData?.map((item, index) => ( 
-          <SmallCard key ={item.img} img={item.img} distance ={item.distance} location = {item.location}/>
+        {catData?.map((item, index) => ( 
+          <SmallCard key={item.link} img={item.logo.url} distance={item.subCategoryLenght} location={item.categoryName}/>
         ))}   
         </div>
          </section>
@@ -59,10 +60,12 @@ export default function Home({exploreData,cardsData}) {
   export async function getStaticProps() {
     const exploreData = eData
     const cardsData = cData
-    // const cardsData = await fetch('https://links.papareact.com/zp1')
-    // .then(res => res.json());
+    const catData1 = await fetch(`http://localhost:2040/api/v1/addition/category/allCatForPublic`)
+    .then().catch(err => console.log(err))
+    const catData = await catData1.json()
     return {
       props: {
+        catData,
         exploreData,
         cardsData
       }

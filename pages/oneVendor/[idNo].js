@@ -9,32 +9,32 @@ import PhotosCardCom from "../../components/ListingPage/allPhotoList";
 import LogoDesCom from "../../components/ListingPage/LogoDes";
 import ServiceCardCom from "../../components/ListingPage/ServiceCard";
 
-function Listing({cardsData,vendorData}) {
+function Listing({cardsData,businessData}) {
     const router = useRouter();
     const { idNo } = router.query;
     console.log(idNo)
   return (
     <div className="bg-gray-50">
-        <Header placeholder={`Result for ${vendorData.businessName}`}/>
+        <Header placeholder={`Result for ${businessData.businessName}`}/>
 <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
-<CrausalCom img={vendorData.allImage} />
+<CrausalCom img={businessData.allImage} />
 <div className="space-y-2 text-xs text-gray-600">
   <div className="flex mt-2 mb-2 space-x-2">
-  <h1 className="font-bold leading-tight text-2xl  text-black">{vendorData.businessName}</h1>
+  <h1 className="font-bold leading-tight text-2xl  text-black">{businessData.businessName}</h1>
   {/* <HeartIcon className="h-7  cursor-pointer"/> */}
   </div>
-            <p>By - {vendorData.contactPersonName} </p>
+            <p>By - {businessData.contactPersonName} </p>
             <p>
               {/* <RatingCom star={4} num={4.4}  /> */}
             </p>
-            <p>Stablished on - {vendorData.yearEstablished}</p>
+            <p>Stablished on - {businessData.yearEstablished}</p>
             {/* <p>{idNo}</p> */}
             {/* <p>Investor Relations</p> */}
         </div>
 <ActionButtonCom
-mobileNo={vendorData.contactNo}
-latitude = {vendorData.latitude}
-longitude = {vendorData.longitude}
+mobileNo={businessData.contactNo}
+latitude = {businessData.latitude}
+longitude = {businessData.longitude}
 />
 
   <section>
@@ -44,7 +44,7 @@ longitude = {vendorData.longitude}
           <div className="flex space-x-4 overflow-scroll scrollbar-hide
           p-1 ml-0
           ">
-          {vendorData.allImage?.map((item, index) => (
+          {businessData.allImage?.map((item, index) => (
             <PhotosCardCom key = {index} img={item.imgUrl} />
           ))}
           </div>  
@@ -59,9 +59,9 @@ Upload Photo
 <div className="grid grid-cols-1 divide-y">
 
 <LogoDesCom logo={ <MapIcon className="h-5 object-center"/>} 
-text={"State: " + vendorData.state + ", District: " + vendorData.district}/>
+text={"State: " + businessData.state + ", District: " + businessData.district}/>
 <LogoDesCom logo={ <PhoneIcon className="h-5 object-center"/>} 
-text={vendorData.contactNo}
+text={businessData.contactNo}
 />
 {/* <LogoDesCom logo={ <ClockIcon className="h-5 object-center"/>} 
 text={"Opens at 11.00 AM EveryDay"}
@@ -73,7 +73,7 @@ text={"Opens at 11.00 AM EveryDay"}
           </h2>
           <div className="grid grid-cols-2 
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " >
-            <ServiceCardCom title={vendorData.myServices.serviceName} />
+            <ServiceCardCom title={businessData.myServices.serviceName} />
            
           </div>
 </div>
@@ -95,12 +95,12 @@ text={"Opens at 11.00 AM EveryDay"}
 export default Listing
 
 export async function getServerSideProps({params}) {
-    const vendorId = params.idNo
-  const vendorData = await fetch(`https://searchkarna.com/api/v1/addition/vendor/addVendor/get/${vendorId}`)
-  .then(res => res.json());
+    const businessId = params.idNo
+  const businessData = await fetch(`https://searchkarna.com/api/v1/addition/business/addBusiness/get/${businessId}`)
+  .then().catch(err => console.log(err))
   return {
     props: {
-      vendorData
+      businessData
       
     }
   }

@@ -3,51 +3,59 @@ import HeaderTwoCom from "../../components/SubCategoryPage/HeaderTwo"
 import { useRouter } from 'next/router'
 import SubListCom from "../../components/SubCategoryPage/SubList";
 import { MapIcon, PhoneIcon } from "@heroicons/react/solid";
-function Search({cardData}) {
-
+function subWithCatLink({cardData,allSubWithCatLink,testData}) {
+//  /subCategory/check
   return (
     <div className="bg-gray-50">
-    <HeaderTwoCom />
-<main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
+    <HeaderTwoCom catName={allSubWithCatLink[0]?.category.categoryName || "No result"}/>
+<main className="py-6 px-4 sm:p-6 md:py-10 md:px-28 md:bg-slate-50">
 
 
 
 
-<section>
+<section className=" md:bg-slate-50">
 {/* //////////////////////////////////// */}
 <div className="grid grid-cols-1 divide-y">
-{cardData?.map((item, index) => (
-    <SubListCom logoLink={item.logo } 
-    title={item.title }/>
+{console.log(allSubWithCatLink)}
+  
+{
+allSubWithCatLink?.map((item, index) => (
+    <SubListCom key={index} logoLink={item.logo.url } 
+    title={item.subCategoryName }/>
 ))}
-
-
-
 {/* Services */}
 
 {/* Description */}
-
-
-
 </div>
 </section>
 </main>
-
     <Footer />
 </div>
   )
 }
 
-export default Search
+export default subWithCatLink
 
-export async function getServerSideProps() {
+export async function getServerSideProps({params}) {
  const cardData = eData
 
-    return{
-        props: {
-            cardData
-    }}
+
+    const catLink = params.withCatLink
+  const allSubWithCatLink2 = await fetch(`https://searchkarna.com/api/v1/forPublicWeb/catSubCat/getSubWithLogo/${catLink}`)
+  .then().catch(err => console.log(err))
+console.log(allSubWithCatLink2)
+  const allSubWithCatLink = await allSubWithCatLink2.json()
+
+  return {
+    props: {
+        allSubWithCatLink,
+      cardData,
+
+      
+    }
+  }
 }
+
 
 const eData = [
     {"logo":"https://akam.cdn.jdmagicbox.com/images/icons/newwap/newhotkey/finddoctors.svg","title":"Vivek1"},

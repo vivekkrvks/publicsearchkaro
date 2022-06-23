@@ -13,7 +13,7 @@ function SubListCom({logoLink,title}) {
      cursor-pointer my-auto " >
     <div className="relative h-7 w-7 ">
     <Image
-        src={logoLink} layout="fill"
+        src={logoLink || "https://res.cloudinary.com/oasismanor/image/upload/v1656011132/defaults/vaprfamegbbm9puqmzz9.jpg"} layout="fill"
         className="rounded-lg "
         />
     </div>

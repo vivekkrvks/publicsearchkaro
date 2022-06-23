@@ -6,7 +6,9 @@ import LargeCard from "../components/HomePage/LargeCard";
 import MediumCard from "../components/HomePage/MediumCard";
 import SmallCard from "../components/HomePage/SmallCard";
 import LogoDesCom from "../components/ListingPage/LogoDes";
+
 export default function Home({exploreData,cardsData,catData}) {
+
   return (
     <div className=""> 
       <Head>
@@ -30,7 +32,11 @@ export default function Home({exploreData,cardsData,catData}) {
         
         ">
         {catData?.map((item, index) => ( 
-          <SmallCard key={item.link} img={item.logo.url} distance={item.subCategoryLenght} location={item.categoryName}/>
+          <SmallCard key={item.link} 
+          img={item.logo.url} 
+          link={item.link}
+          distance={item.subCategoryLenght + "+ Sub Category"}
+           location={item.categoryName}/>
         ))}   
         </div>
          </section>
@@ -60,7 +66,7 @@ export default function Home({exploreData,cardsData,catData}) {
   export async function getStaticProps() {
     const exploreData = eData
     const cardsData = cData
-    const catData1 = await fetch(`http://localhost:2040/api/v1/addition/category/allCatForPublic`)
+    const catData1 = await fetch(`https://searchkarna.com/api/v1/addition/category/allCatForPublic`)
     .then().catch(err => console.log(err))
     const catData = await catData1.json()
     return {

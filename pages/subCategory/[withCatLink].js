@@ -5,6 +5,8 @@ import SubListCom from "../../components/SubCategoryPage/SubList";
 import { MapIcon, PhoneIcon } from "@heroicons/react/solid";
 function subWithCatLink({cardData,allSubWithCatLink,testData}) {
 //  /subCategory/check
+const router = useRouter();
+
   return (
     <div className="bg-gray-50">
     <HeaderTwoCom catName={allSubWithCatLink[0]?.category.categoryName || "No result"}/>
@@ -16,12 +18,12 @@ function subWithCatLink({cardData,allSubWithCatLink,testData}) {
 <section className=" md:bg-slate-50">
 {/* //////////////////////////////////// */}
 <div className="grid grid-cols-1 divide-y">
-{console.log(allSubWithCatLink)}
+
   
 {
 allSubWithCatLink?.map((item, index) => (
     <SubListCom key={index} logoLink={item.logo.url } 
-    title={item.subCategoryName }/>
+    title={item.subCategoryName } subCatLink={item.link} />
 ))}
 {/* Services */}
 
@@ -43,7 +45,6 @@ export async function getServerSideProps({params}) {
     const catLink = params.withCatLink
   const allSubWithCatLink2 = await fetch(`https://searchkarna.com/api/v1/forPublicWeb/catSubCat/getSubWithLogo/${catLink}`)
   .then().catch(err => console.log(err))
-console.log(allSubWithCatLink2)
   const allSubWithCatLink = await allSubWithCatLink2.json()
 
   return {

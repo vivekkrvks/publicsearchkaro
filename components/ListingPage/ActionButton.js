@@ -1,4 +1,4 @@
-function ActionButtonCom({mobileNo,latitude,longitude}) {
+function ActionButtonCom({mobileNo,latitude,longitude,whatsAppNo}) {
   return(
     <>
     <div className="flex justify-between  py-2" >
@@ -37,7 +37,7 @@ function ActionButtonCom({mobileNo,latitude,longitude}) {
     <div className="text-xs text-gray-600">
     <div className="flex items-center space-y-2  
     border-2 p-2 rounded-full shadow-sm" type="button" 
-    onClick={() => window.open(`https://wa.me/${mobileNo}`)}>
+    onClick={() => window.open(`https://wa.me/${whatsAppNo}`)}>
     <img
             src="https://www.svgrepo.com/show/303150/whatsapp-symbol-logo.svg"
             layout="fill" 

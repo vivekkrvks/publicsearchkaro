@@ -12,7 +12,19 @@ import ServiceCardCom from "../../components/ListingPage/ServiceCard";
 function Listing({cardsData,businessData}) {
     const router = useRouter();
     const { idNo } = router.query;
-    console.log(idNo)
+    const returnMeContactNumber = () => {
+      let cNo = businessData.contactNo1
+      if(businessData.contactNo2){
+        cNo += `, ${businessData.contactNo2}`
+      } else 
+      if(businessData.contactNo3){
+        cNo += `, ${businessData.contactNo3}`
+      } else 
+      if(businessData.contactNo4){
+        cNo += `, ${businessData.contactNo4}`
+      }
+      return cNo
+    }
   return (
     <div className="bg-gray-50">
         <Header placeholder={`Result for ${businessData.businessName}`}/>
@@ -32,7 +44,8 @@ function Listing({cardsData,businessData}) {
             {/* <p>Investor Relations</p> */}
         </div>
 <ActionButtonCom
-mobileNo={businessData.contactNo}
+mobileNo={businessData.contactNo1}
+whatsAppNo={businessData.whatsAppNo}
 latitude = {businessData.latitude}
 longitude = {businessData.longitude}
 />
@@ -61,7 +74,7 @@ Upload Photo
 <LogoDesCom logo={ <MapIcon className="h-5 object-center"/>} 
 text={"State: " + businessData.state + ", District: " + businessData.district}/>
 <LogoDesCom logo={ <PhoneIcon className="h-5 object-center"/>} 
-text={businessData.contactNo}
+text={returnMeContactNumber()}
 />
 {/* <LogoDesCom logo={ <ClockIcon className="h-5 object-center"/>} 
 text={"Opens at 11.00 AM EveryDay"}
@@ -73,7 +86,9 @@ text={"Opens at 11.00 AM EveryDay"}
           </h2>
           <div className="grid grid-cols-2 
         sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " >
-            <ServiceCardCom title={businessData.myServices.serviceName} />
+          {businessData.myServices.map((item,index) => (
+            <ServiceCardCom title={item.serviceName} />
+          ))}
            
           </div>
 </div>
@@ -95,9 +110,11 @@ text={"Opens at 11.00 AM EveryDay"}
 export default Listing
 
 export async function getServerSideProps({params}) {
-    const businessId = params.idNo
-  const businessData = await fetch(`https://searchkarna.com/api/v1/addition/business/addBusiness/get/${businessId}`)
+    const businessLink = params.businessLink
+  const businessData2 = await fetch(`https://searchkarna.com/api/v1/forPublicWeb/getPubBusiness/getOne/${businessLink}`)
   .then().catch(err => console.log(err))
+  const businessData = await businessData2.json()
+  console.log(businessData)
   return {
     props: {
       businessData

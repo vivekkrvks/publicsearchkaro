@@ -1,9 +1,14 @@
 import  {ChevronRightIcon } from '@heroicons/react/outline'
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
-function SubListCom({logoLink,title}) {
+function SubListCom({logoLink,title,subCatLink}) {
+const router = useRouter();
+
  return(
-    <div className="p-3 grid grid-cols-2  gap-1 rounded-b-lg border-b
+    <div 
+    onClick={() => router.push(`/businessList/${subCatLink}`)}
+    className="p-3 grid grid-cols-2  gap-1 rounded-b-lg border-b
      border-gray-400 break-words text-gray-900
      cursor-pointer mt-1
     hover:bg-gray-100 hover:shadow-lg hover:scale-101 transition 

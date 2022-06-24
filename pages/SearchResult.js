@@ -11,7 +11,7 @@ function Search({searchResults}) {
         <main className="flex">
             <section className="flex-grow pt-4 px-6">
                 <p className="text-xs">
-                    300+ results for 
+                    3000+ results for 
                     <b> {searchData}</b>
                 </p>
                 <h1 className="text-3xl font-semibold mt-2 mb-6">

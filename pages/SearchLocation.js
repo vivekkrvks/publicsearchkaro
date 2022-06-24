@@ -1,7 +1,9 @@
 import  {ChevronDownIcon, ChevronLeftIcon, LocationMarkerIcon, SearchIcon, ShareIcon } from '@heroicons/react/outline'
 import PopUpCom from '../components/Common/PopUp';
-
+import { useRouter } from 'next/router'
 function SearchPageCom() {
+  const router = useRouter();
+
     return(
         <>
     <header
@@ -15,11 +17,14 @@ function SearchPageCom() {
     </div>
     {/* middle */}
     <div className="flex items-center justify-center  py-2 ">
-        <p className="font-medium leading-tight text-xl">Araria </p>
+        <p className="font-medium leading-tight text-xl">Search Location </p>
          </div>
     {/* right */}
     <div className="flex items-center justify-end text-grey-500 space-x-4 ">
-    <ShareIcon className="h-6" />
+    <SearchIcon onClick={() => router.push('/SearchPage')}  
+    className="h-6 cursor-pointer
+     
+    " />
     </div>
 </header>
 <section>

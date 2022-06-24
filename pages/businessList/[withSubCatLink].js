@@ -2,6 +2,7 @@ import Footer from "../../components/HomePage/Footer"
 import Header from "../../components/HomePage/Header"
 import { useRouter } from 'next/router'
 import InfoCard from "../../components/SearchPage/InfoCard";
+import PaginationCom from "../../components/BusinessListPage/Pagination";
 function BusinessList({searchResults,allBusinessList}) {
     const router = useRouter();
     const { searchData } = router.query;
@@ -46,6 +47,7 @@ function BusinessList({searchResults,allBusinessList}) {
                    />
                 ))}
                 </div>
+                <PaginationCom />
             </section>
         </main>
         <Footer />

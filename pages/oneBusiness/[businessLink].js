@@ -8,6 +8,7 @@ import ActionButtonCom from "../../components/ListingPage/ActionButton";
 import PhotosCardCom from "../../components/ListingPage/allPhotoList";
 import LogoDesCom from "../../components/ListingPage/LogoDes";
 import ServiceCardCom from "../../components/ListingPage/ServiceCard";
+import FaqCom from "../../components/ListingPage/Faq";
 
 function Listing({cardsData,businessData}) {
     const router = useRouter();
@@ -27,7 +28,7 @@ function Listing({cardsData,businessData}) {
     }
   return (
     <div className="bg-gray-50">
-        <Header placeholder={`Result for ${businessData.businessName}`}/>
+        <Header placeholder={`${businessData.businessName}`}/>
 <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
 <CrausalCom img={businessData.allImage} />
 <div className="space-y-2 text-xs text-gray-600">
@@ -93,8 +94,11 @@ text={"Opens at 11.00 AM EveryDay"}
           </div>
 </div>
 {/* Description */}
-<div className="p-3  gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900">
-          
+<div className="p-2 px-2 gap-4 rounded-b-lg border-b border-gray-200 break-words text-gray-900 " >
+<h1 className="text-1xl font-semibold py-1 px-2 ">
+Frequently Asked Question
+          </h1>
+<FaqCom />
 </div>
 
 
@@ -114,7 +118,6 @@ export async function getServerSideProps({params}) {
   const businessData2 = await fetch(`https://searchkarna.com/api/v1/forPublicWeb/getPubBusiness/getOne/${businessLink}`)
   .then().catch(err => console.log(err))
   const businessData = await businessData2.json()
-  console.log(businessData)
   return {
     props: {
       businessData

@@ -35,7 +35,9 @@ const [searchData, setSearchData] = useState("");
          </div>
     {/* right */}
     <div className="flex items-center justify-end text-grey-500 space-x-4 ">
-    <ShareIcon className="h-6 cursor-pointer" />
+    {/* <SearchIcon onClick={() => router.push('/SearchPage')}  
+    className="h-6 cursor-pointer     
+    " /> */}
     </div>
 </header>
 <section>
